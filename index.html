@@ -19,6 +19,11 @@
 <script>
 	var canvas = document.getElementById('game-canvas');
 	var ctx = canvas.getContext('2d');
+	var img = new Image();
+	img.onload = function() {
+		ctx.drawImage(img, 0, 0);
+	};
+	img.src = 'space.jpg';
 	var game = new Asteroids.Game;
 	var gameview = new Asteroids.GameView(game, ctx);
 	gameview.start();
