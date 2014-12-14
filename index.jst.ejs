@@ -22,10 +22,12 @@
 	var canvas = document.getElementById('game-canvas');
 	var ctx = canvas.getContext('2d');
 	var img = new Image();
+	var ship = new Image();
 	img.onload = function() {
 		ctx.drawImage(img, 0, 0);
 	};
 	img.src = 'space.jpg';
+	ship.src = 'ship.gif';
 	var game = new Asteroids.Game;
 	var gameview = new Asteroids.GameView(game, ctx);
 	gameview.start();
